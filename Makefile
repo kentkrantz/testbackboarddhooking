@@ -5,7 +5,8 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = testbackboarddhooking
 testbackboarddhooking_FILES = backboardd.x Log.m
-
+testbackboarddhooking_FRAMEWORKS = Foundation UIKit
+		
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
