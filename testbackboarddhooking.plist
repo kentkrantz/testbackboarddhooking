@@ -2,6 +2,8 @@
 	Filter = {
 		Bundles = (
 			"com.apple.backboardd",
+			"com.apple.springboard",
+			"com.apple.UIKit",
 		);
 	};
 }

@@ -1,6 +1,7 @@
 #import "Log.h"
+#import <UIKit/UIKit.h>
 
-#define kLogFilePath @"/var/mobile/testbackboarddhooking.txt"
+#define kLogFilePath @"/var/testbackboarddhooking.txt"
 
 void logToFile(NSString *format, ...)
 {
@@ -28,4 +29,13 @@ void logToFile(NSString *format, ...)
         [fileHandler writeData:[logContent dataUsingEncoding:NSUTF8StringEncoding]];
         [fileHandler closeFile];
     }
+}
+
+void alert(NSString *message)
+{
+    // 回到主线程
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    });
 }

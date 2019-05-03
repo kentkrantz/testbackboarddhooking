@@ -1,5 +1,4 @@
-THEOS = /opt/theos
-THEOS_DEVICE_IP = 192.168.2.51
+# source .env
 
 include $(THEOS)/makefiles/common.mk
 
