@@ -1,2 +1,2 @@
 # testbackboarddhooking
-Test backboardd hooking on Meridian jailbreak environment.
+Test backboardd hooking on Meridian/Chimera jailbreak environment.
